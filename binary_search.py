@@ -9,6 +9,7 @@ limit_superior = max(1.0, objective)
 response = (limit_infer + limit_superior) / 2
 
 while abs(response**2 - objective) >= EPSILON:
+    print(f"infer: {limit_infer} superior: {limit_superior} response: {response}")
     if response**2 < objective:
         limit_infer = response
     else:
